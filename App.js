@@ -7,7 +7,7 @@ function App() {
   let expenses = [
     {title :'Food' ,price:'$25' ,locationOfExpenditure:'Resturant'},
     {title:'Car' , price: '$50000' ,locationOfExpenditure:'NK'},
-    {title:'Shooping' , price:'$4000' , locationOfExpenditure:'Mall'}
+    { title:'Shooping' , price:'$4000' , locationOfExpenditure:'Mall'}
   ]
   return (
     <div className="App">
@@ -15,6 +15,7 @@ function App() {
     <p>{currentDate.toDateString()}</p>
     {expenses.map((expense , index)=>(
   <ExpensesItems key={index}
+  date ={currentDate}
    title={expense.title}
    price={expense.price}
    locationOfExpenditure={expense.locationOfExpenditure}
